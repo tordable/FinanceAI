@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.625" name="Cashflows">
+  <DataContextMoniker Name="/CashflowsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ba0a2479-12c2-49fb-bdab-fc82aaa3c356" absoluteBounds="1.875, 4, 2, 4.3830997721354166">
+      <DataClassMoniker Name="/CashflowsDataContext/Cashflow" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e9d86aad-1903-4189-ace6-435af9a45664" absoluteBounds="1.8900000000000001, 4.46, 1.9700000000000002, 3.823099772135417" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

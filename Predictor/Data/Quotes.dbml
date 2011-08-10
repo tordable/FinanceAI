@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="FinancialData" Class="QuotesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\FinancialData.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="FinanceAI.Properties.Settings" SettingsPropertyName="FinancialDataConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Quotes" Member="Quotes">
+    <Type Name="Quote">
+      <Column Name="Ticker" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Open]" Member="Open" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="High" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Low" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Close]" Member="Close" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Volume" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

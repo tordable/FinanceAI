@@ -1,0 +1,25 @@
+﻿TODO
+
+* Ranker performance
+	Rank = IFinancialData.Performance
+	For this performance some metrics may be equivalent to financial metrics
+* Libraries
+	Set clear guidelines for libraries
+* Create the Finance library 
+	Financial ai classes
+	StockPicker<IClassifier, IFinancialData> ?
+* Data library
+	Add features to the samples, P/E, other financial rations
+	Analyst opinions, text classification (positive/negative)
+	Study scalability, performance, distributed systems
+* Math library
+	Statistics, Regression, Extrapolation, Interpolation
+	Time series, Fourier analysis
+	Covariance, beta
+* AI library
+	Other classifiers, decission trees, svms, platts adjustment
+	Boosted trees, Random forests
+	Classifier ensembles, etc.
+* Other apps
+	Analysis of time series for prediction
+	Portfolio management, using CAPM and other methods

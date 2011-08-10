@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{761C1154-273E-424F-B77F-E193A28BA1A8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FinanceAI</RootNamespace>
+    <AssemblyName>Predictor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>CCE4DA74ACD4E0144508CC122BA126DCEA9B9622</ManifestCertificateThumbprint>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <PublishUrl>D:\Yang\code\FinanceAI\Deploy\Predictor\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>Predictor</ProductName>
+    <PublisherName>FinanceAI</PublisherName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Predictor_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+    <ApplicationIcon>Predictor.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AI\ClassificationData.cs" />
+    <Compile Include="AI\ClassifierPerformance.cs" />
+    <Compile Include="AI\IFeatureSelector.cs" />
+    <Compile Include="AI\ISampleSelector.cs" />
+    <Compile Include="AI\SampleBasic.cs" />
+    <Compile Include="AI\SimpleNeuralNet1.cs" />
+    <Compile Include="DataExtractor.cs" />
+    <Compile Include="AI\ISample.cs" />
+    <Compile Include="Data\Balances.cs">
+      <DependentUpon>Balances.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Balances.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Balances.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Cashflows.cs">
+      <DependentUpon>Cashflows.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Cashflows.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cashflows.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Incomes.cs">
+      <DependentUpon>Incomes.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Incomes.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Incomes.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Quotes.cs">
+      <DependentUpon>Quotes.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Quotes.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Quotes.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Samples\IFinancialSample.cs" />
+    <Compile Include="Data\Samples\QLSample.cs">
+      <DependentUpon>QLSample.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Samples\QLSample.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSample.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Samples\QUSample.cs">
+      <DependentUpon>QUSample.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Samples\QUSample.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUSample.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Samples\YLSample.cs">
+      <DependentUpon>YLSample.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Samples\YLSample.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YLSample.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Samples\YUSample.cs">
+      <DependentUpon>YUSample.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Samples\YUSample.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YUSample.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AI\IRanker.cs" />
+    <Compile Include="AI\IExtractor.cs" />
+    <Compile Include="AI\IClassifier.cs" />
+    <Compile Include="AI\NeuralNet.cs" />
+    <Compile Include="UI\LoadAnalysisDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LoadAnalysisDataForm.Designer.cs">
+      <DependentUpon>LoadAnalysisDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoadTrainTestDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LoadTrainTestDataForm.Designer.cs">
+      <DependentUpon>LoadTrainTestDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PredictorControl.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Data\Balances.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Balances.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Cashflows.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Cashflows.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Incomes.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Incomes.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Quotes.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Quotes.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Quotes.dbml.layout">
+      <DependentUpon>Quotes.dbml</DependentUpon>
+    </None>
+    <None Include="Data\Balances.dbml.layout">
+      <DependentUpon>Balances.dbml</DependentUpon>
+    </None>
+    <None Include="Data\Cashflows.dbml.layout">
+      <DependentUpon>Cashflows.dbml</DependentUpon>
+    </None>
+    <None Include="Data\Incomes.dbml.layout">
+      <DependentUpon>Incomes.dbml</DependentUpon>
+    </None>
+    <None Include="Data\Samples\QLSample.dbml.layout">
+      <DependentUpon>QLSample.dbml</DependentUpon>
+    </None>
+    <None Include="Data\Samples\QUSample.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QUSample.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Samples\YLSample.dbml.layout">
+      <DependentUpon>YLSample.dbml</DependentUpon>
+    </None>
+    <None Include="Data\Samples\QUSample.dbml.layout">
+      <DependentUpon>QUSample.dbml</DependentUpon>
+    </None>
+    <None Include="Data\Samples\YUSample.dbml.layout">
+      <DependentUpon>YUSample.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoadAnalysisDataForm.resx">
+      <DependentUpon>LoadAnalysisDataForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoadTrainTestDataForm.resx">
+      <DependentUpon>LoadTrainTestDataForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SetTrainParamsForm.resx">
+      <DependentUpon>SetTrainParamsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TestResultsForm.resx">
+      <DependentUpon>TestResultsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Data\Samples\QLSample.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QLSample.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Samples\YLSample.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>YLSample.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Samples\YUSample.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>YUSample.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Predictor_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UI\SetTrainParamsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SetTrainParamsForm.Designer.cs">
+      <DependentUpon>SetTrainParamsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TestResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TestResultsForm.Designer.cs">
+      <DependentUpon>TestResultsForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.9.2">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2005 Express Edition SP2 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Predictor.ico" />
+    <Content Include="TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="TODO.txt">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>copy "D:\Yang\code\FinanceAI\DB\FinancialData.mdf" "D:\Yang\code\FinanceAI\Predictor\bin\Debug\FinancialData.mdf" 
+copy "D:\Yang\code\FinanceAI\DB\FinancialData_log.ldf" "D:\Yang\code\FinanceAI\Predictor\bin\Debug\FinancialData_log.ldf"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

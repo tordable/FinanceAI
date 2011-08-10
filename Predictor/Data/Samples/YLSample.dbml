@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="FinancialData" Class="YLSampleDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=D:\Yang\code\FinanceAI\DB\FinancialData.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True" SettingsObjectName="FinanceAI.Properties.Settings" SettingsPropertyName="FinancialDataConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.YLSamples" Member="YLSamples">
+    <Type Name="YLSample">
+      <Column Name="Ticker" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Performance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Revenue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Other Revenue, Total]" Member="Other_Revenue__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Revenue]" Member="Total_Revenue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Cost Of Revenue, Total]" Member="Cost_Of_Revenue__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Gross Profit]" Member="Gross_Profit" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Selling/General/Admin. Expenses, Total]" Member="Selling_General_Admin__Expenses__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Research &amp; Development]" Member="Research___Development" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Depreciation/Amortization]" Member="Depreciation_Amortization" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Interest Expense(Income) - Net Operating]" Member="Interest_Expense_Income____Net_Operating" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Unusual Expense (Income)]" Member="Unusual_Expense__Income_" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Other Operating Expenses, Total]" Member="Other_Operating_Expenses__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Operating Expense]" Member="Total_Operating_Expense" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Operating Income]" Member="Operating_Income" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Interest Income(Expense), Net Non-Operating]" Member="Interest_Income_Expense___Net_Non_Operating" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Gain (Loss) on Sale of Assets]" Member="Gain__Loss__on_Sale_of_Assets" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Other, Net]" Member="Other__Net" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Income Before Tax]" Member="Income_Before_Tax" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Income After Tax]" Member="Income_After_Tax" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Minority Interest]" Member="Minority_Interest" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Equity In Affiliates]" Member="Equity_In_Affiliates" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Net Income Before Extra. Items]" Member="Net_Income_Before_Extra__Items" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Accounting Change]" Member="Accounting_Change" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Discontinued Operations]" Member="Discontinued_Operations" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Extraordinary Item]" Member="Extraordinary_Item" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Net Income]" Member="Net_Income" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Preferred Dividends]" Member="Preferred_Dividends" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Income Available to Common Excl. Extra Items]" Member="Income_Available_to_Common_Excl__Extra_Items" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Income Available to Common Incl. Extra Items]" Member="Income_Available_to_Common_Incl__Extra_Items" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Basic Weighted Average Shares]" Member="Basic_Weighted_Average_Shares" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Basic EPS Excluding Extraordinary Items]" Member="Basic_EPS_Excluding_Extraordinary_Items" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Basic EPS Including Extraordinary Items]" Member="Basic_EPS_Including_Extraordinary_Items" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Dilution Adjustment]" Member="Dilution_Adjustment" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Diluted Weighted Average Shares]" Member="Diluted_Weighted_Average_Shares" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Diluted EPS Excluding Extraordinary Items]" Member="Diluted_EPS_Excluding_Extraordinary_Items" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Diluted EPS Including Extraordinary Items]" Member="Diluted_EPS_Including_Extraordinary_Items" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Dividends per Share - Common Stock Primary Issue]" Member="Dividends_per_Share___Common_Stock_Primary_Issue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Gross Dividends - Common Stock]" Member="Gross_Dividends___Common_Stock" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Net Income after Stock Based Comp. Expense]" Member="Net_Income_after_Stock_Based_Comp__Expense" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Basic EPS after Stock Based Comp. Expense]" Member="Basic_EPS_after_Stock_Based_Comp__Expense" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Diluted EPS after Stock Based Comp. Expense]" Member="Diluted_EPS_after_Stock_Based_Comp__Expense" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Depreciation, Supplemental]" Member="Depreciation__Supplemental" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Special Items]" Member="Total_Special_Items" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Normalized Income Before Taxes]" Member="Normalized_Income_Before_Taxes" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Effect of Special Items on Income Taxes]" Member="Effect_of_Special_Items_on_Income_Taxes" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Income Taxes Ex. Impact of Special Items]" Member="Income_Taxes_Ex__Impact_of_Special_Items" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Normalized Income After Taxes]" Member="Normalized_Income_After_Taxes" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Normalized Income Avail to Common]" Member="Normalized_Income_Avail_to_Common" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Basic Normalized EPS]" Member="Basic_Normalized_EPS" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Diluted Normalized EPS]" Member="Diluted_Normalized_EPS" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Cash &amp; Equivalents]" Member="Cash___Equivalents" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Short Term Investments]" Member="Short_Term_Investments" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Cash and Short Term Investments]" Member="Cash_and_Short_Term_Investments" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Accounts Receivable - Trade, Net]" Member="Accounts_Receivable___Trade__Net" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Receivables - Other]" Member="Receivables___Other" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Receivables, Net]" Member="Total_Receivables__Net" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Inventory]" Member="Total_Inventory" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Prepaid Expenses]" Member="Prepaid_Expenses" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Other Current Assets, Total]" Member="Other_Current_Assets__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Current Assets]" Member="Total_Current_Assets" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Property/Plant/Equipment, Total - Gross]" Member="Property_Plant_Equipment__Total___Gross" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Goodwill, Net]" Member="Goodwill__Net" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Intangibles, Net]" Member="Intangibles__Net" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Long Term Investments]" Member="Long_Term_Investments" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Other Long Term Assets, Total]" Member="Other_Long_Term_Assets__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Assets]" Member="Total_Assets" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Accounts Payable]" Member="Accounts_Payable" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Accrued Expenses]" Member="Accrued_Expenses" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Notes Payable/Short Term Debt]" Member="Notes_Payable_Short_Term_Debt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Current Port. of LT Debt/Capital Leases]" Member="Current_Port__of_LT_Debt_Capital_Leases" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Other Current liabilities, Total]" Member="Other_Current_liabilities__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Current Liabilities]" Member="Total_Current_Liabilities" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Long Term Debt]" Member="Long_Term_Debt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Capital Lease Obligations]" Member="Capital_Lease_Obligations" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Long Term Debt]" Member="Total_Long_Term_Debt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Debt]" Member="Total_Debt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Deferred Income Tax]" Member="Deferred_Income_Tax" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Other Liabilities, Total]" Member="Other_Liabilities__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Liabilities]" Member="Total_Liabilities" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Redeemable Preferred Stock, Total]" Member="Redeemable_Preferred_Stock__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Preferred Stock - Non Redeemable, Net]" Member="Preferred_Stock___Non_Redeemable__Net" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Common Stock, Total]" Member="Common_Stock__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Additional Paid-In Capital]" Member="Additional_Paid_In_Capital" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Retained Earnings (Accumulated Deficit)]" Member="Retained_Earnings__Accumulated_Deficit_" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Treasury Stock - Common]" Member="Treasury_Stock___Common" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Other Equity, Total]" Member="Other_Equity__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Equity]" Member="Total_Equity" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Liabilities &amp; Shareholders' Equity]" Member="Total_Liabilities___Shareholders__Equity" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Shares Outs - Common Stock Primary Issue]" Member="Shares_Outs___Common_Stock_Primary_Issue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Common Shares Outstanding]" Member="Total_Common_Shares_Outstanding" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Depreciation/Depletion]" Member="Depreciation_Depletion" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Amortization" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Deferred Taxes]" Member="Deferred_Taxes" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Non-Cash Items]" Member="Non_Cash_Items" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Changes in Working Capital]" Member="Changes_in_Working_Capital" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Cash from Operating Activities]" Member="Cash_from_Operating_Activities" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Capital Expenditures]" Member="Capital_Expenditures" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Other Investing Cash Flow Items, Total]" Member="Other_Investing_Cash_Flow_Items__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Cash from Investing Activities]" Member="Cash_from_Investing_Activities" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Financing Cash Flow Items]" Member="Financing_Cash_Flow_Items" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Cash Dividends Paid]" Member="Total_Cash_Dividends_Paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Issuance (Retirement) of Stock, Net]" Member="Issuance__Retirement__of_Stock__Net" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Issuance (Retirement) of Debt, Net]" Member="Issuance__Retirement__of_Debt__Net" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Cash from Financing Activities]" Member="Cash_from_Financing_Activities" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Foreign Exchange Effects]" Member="Foreign_Exchange_Effects" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Net Change in Cash]" Member="Net_Change_in_Cash" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Cash Interest Paid, Supplemental]" Member="Cash_Interest_Paid__Supplemental" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Cash Taxes Paid, Supplemental]" Member="Cash_Taxes_Paid__Supplemental" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="FinancialData" Class="BalancesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=D:\Yang\code\FinanceAI\DB\FinancialData.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True" SettingsObjectName="FinanceAI.Properties.Settings" SettingsPropertyName="FinancialDataConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Balances" Member="Balances">
+    <Type Name="Balance">
+      <Column Name="Ticker" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Period" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Cash &amp; Equivalents]" Member="Cash___Equivalents" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Short Term Investments]" Member="Short_Term_Investments" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Cash and Short Term Investments]" Member="Cash_and_Short_Term_Investments" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Accounts Receivable - Trade, Net]" Member="Accounts_Receivable___Trade__Net" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Receivables - Other]" Member="Receivables___Other" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Receivables, Net]" Member="Total_Receivables__Net" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Inventory]" Member="Total_Inventory" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Prepaid Expenses]" Member="Prepaid_Expenses" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Other Current Assets, Total]" Member="Other_Current_Assets__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Current Assets]" Member="Total_Current_Assets" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Property/Plant/Equipment, Total - Gross]" Member="Property_Plant_Equipment__Total___Gross" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Goodwill, Net]" Member="Goodwill__Net" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Intangibles, Net]" Member="Intangibles__Net" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Long Term Investments]" Member="Long_Term_Investments" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Other Long Term Assets, Total]" Member="Other_Long_Term_Assets__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Assets]" Member="Total_Assets" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Accounts Payable]" Member="Accounts_Payable" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Accrued Expenses]" Member="Accrued_Expenses" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Notes Payable/Short Term Debt]" Member="Notes_Payable_Short_Term_Debt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Current Port. of LT Debt/Capital Leases]" Member="Current_Port__of_LT_Debt_Capital_Leases" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Other Current liabilities, Total]" Member="Other_Current_liabilities__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Current Liabilities]" Member="Total_Current_Liabilities" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Long Term Debt]" Member="Long_Term_Debt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Capital Lease Obligations]" Member="Capital_Lease_Obligations" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Long Term Debt]" Member="Total_Long_Term_Debt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Debt]" Member="Total_Debt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Deferred Income Tax]" Member="Deferred_Income_Tax" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Minority Interest]" Member="Minority_Interest" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Other Liabilities, Total]" Member="Other_Liabilities__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Liabilities]" Member="Total_Liabilities" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Redeemable Preferred Stock, Total]" Member="Redeemable_Preferred_Stock__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Preferred Stock - Non Redeemable, Net]" Member="Preferred_Stock___Non_Redeemable__Net" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Common Stock, Total]" Member="Common_Stock__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Additional Paid-In Capital]" Member="Additional_Paid_In_Capital" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Retained Earnings (Accumulated Deficit)]" Member="Retained_Earnings__Accumulated_Deficit_" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Treasury Stock - Common]" Member="Treasury_Stock___Common" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Other Equity, Total]" Member="Other_Equity__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Equity]" Member="Total_Equity" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Liabilities &amp; Shareholders' Equity]" Member="Total_Liabilities___Shareholders__Equity" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Shares Outs - Common Stock Primary Issue]" Member="Shares_Outs___Common_Stock_Primary_Issue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Common Shares Outstanding]" Member="Total_Common_Shares_Outstanding" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

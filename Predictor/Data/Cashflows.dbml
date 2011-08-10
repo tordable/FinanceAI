@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="FinancialData" Class="CashflowsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=D:\Yang\code\FinanceAI\DB\FinancialData.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True" SettingsObjectName="FinanceAI.Properties.Settings" SettingsPropertyName="FinancialDataConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Cashflows" Member="Cashflows">
+    <Type Name="Cashflow">
+      <Column Name="Ticker" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Period" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Net Income/Starting Line]" Member="Net_Income_Starting_Line" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Depreciation/Depletion]" Member="Depreciation_Depletion" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Amortization" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Deferred Taxes]" Member="Deferred_Taxes" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Non-Cash Items]" Member="Non_Cash_Items" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Changes in Working Capital]" Member="Changes_in_Working_Capital" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Cash from Operating Activities]" Member="Cash_from_Operating_Activities" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Capital Expenditures]" Member="Capital_Expenditures" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Other Investing Cash Flow Items, Total]" Member="Other_Investing_Cash_Flow_Items__Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Cash from Investing Activities]" Member="Cash_from_Investing_Activities" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Financing Cash Flow Items]" Member="Financing_Cash_Flow_Items" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Cash Dividends Paid]" Member="Total_Cash_Dividends_Paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Issuance (Retirement) of Stock, Net]" Member="Issuance__Retirement__of_Stock__Net" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Issuance (Retirement) of Debt, Net]" Member="Issuance__Retirement__of_Debt__Net" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Cash from Financing Activities]" Member="Cash_from_Financing_Activities" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Foreign Exchange Effects]" Member="Foreign_Exchange_Effects" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Net Change in Cash]" Member="Net_Change_in_Cash" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Cash Interest Paid, Supplemental]" Member="Cash_Interest_Paid__Supplemental" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Cash Taxes Paid, Supplemental]" Member="Cash_Taxes_Paid__Supplemental" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
